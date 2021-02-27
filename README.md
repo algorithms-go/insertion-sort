@@ -1,2 +1,1 @@
-# insertion-sort
-Insertion Sort Algorithm
+# Insertion Sort Algorithm
