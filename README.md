@@ -1,5 +1,7 @@
 # Insertion Sort Algorithm
 
+<img alt="from js to go image" src="https://github.com/algorithms-go/insertion-sort/blob/master/thumb.jpg?raw=true" width="600"/>
+
 ### Overview
 
 Insertion sorting is one of the simplest sorting algorithms, which
@@ -22,6 +24,11 @@ Here are the basic steps of the algorithm:
 Let's suppose we have small array/slice of 6 numbers:
 
 [`5`,`2`,`4`,`6`,`1`,`3`]
+
+Here's how the ***Insertion Sorting Algorithm*** will work step by step:
+
+<img alt="from js to go image" src="https://github.com/algorithms-go/insertion-sort/blob/master/insertion-sort.gif?raw=true" width="600"/>
+
 
 Sorting it using Insertion Sort will result in the
 following steps:
@@ -57,3 +64,12 @@ for j = 1 to A.length
 - Time Complexity: O(k*n)
 - Best: O(n)
 - Worst: O(n*n)
+
+
+// Sort sorts data.
+// It makes one call to data.Len to determine n, and O(n*log(n)) calls to
+// data.Less and data.Swap. The sort is not guaranteed to be stable.
+func Sort(data Interface) {
+	n := data.Len()
+	quickSort(data, 0, n, maxDepth(n))
+}

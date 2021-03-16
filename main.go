@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -18,6 +19,16 @@ func main() {
 	fmt.Println(insertionSortFunc(A, func(elem int, key int) bool {
 		return elem < key
 	}))
+
+	integers := []int{4,2,5,1,6,3}
+	floats := []float64{3.14, 1.24, 0.35}
+	strings := []string{"H", "E", "L", "L", "O"}
+	sort.Ints(integers)
+	sort.Float64s(floats)
+	sort.Strings(strings)
+	fmt.Println(integers)
+	fmt.Println(floats)
+	fmt.Println(strings)
 }
 
 // insertionSort sorts a given array/slice using the INSERTION SORT algorithm
@@ -43,7 +54,7 @@ func insertionSort(A []int) []int {
 // 3. We take each element an insert it into its correct position
 // 4. We use a sorting function as the second condition of the inner loop
 // for better abstraction
-func insertionSortFunc(A []int, sortFunc func(elem int, key int) bool) []int {
+func insertionSortFunc(A []int, sortFunc func(elem, key int) bool) []int {
 	for j := 1; j < len(A); j++ {
 		key := A[j]
 		i := j - 1
