@@ -64,3 +64,9 @@ for j = 1 to A.length
 - Time Complexity: O(k*n)
 - Best: O(n)
 - Worst: O(n*n)
+
+### Resources
+
+- [Go Standard Library - sort package](https://github.com/golang/go/blob/master/src/sort/sort.go#L196)
+- [Medium Article - Insertion Sorting in Go](https://steevehook.medium.com/insertion-sorting-algorithm-in-go-26f1ec49936c)
+- [YouTube Video - Insertion Sorting in Go](https://youtu.be/vg4GS4LSJXI)
